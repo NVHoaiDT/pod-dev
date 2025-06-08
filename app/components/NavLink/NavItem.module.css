@@ -1,0 +1,15 @@
+.navItem {
+   text-decoration: none;
+   list-style: none;
+}
+
+.link {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 8px;
+
+   color: #000000;
+   text-decoration: none;
+}
