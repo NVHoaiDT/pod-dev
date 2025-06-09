@@ -6,13 +6,15 @@
       "build": "react-router build",
       "dev": "react-router dev",
       "start": "react-router-serve ./build/server/index.js",
-      "typecheck": "react-router typegen && tsc"
+      "typecheck": "react-router typegen && tsc",
+      "new-component": "new-component --lang ts --dir app/components"
    },
    "dependencies": {
       "@react-router/node": "^7.6.2",
       "@react-router/serve": "^7.6.2",
       "clsx": "^2.1.1",
       "isbot": "^5.1.28",
+      "new-component": "^6.0.0",
       "react": "^19.1.0",
       "react-dom": "^19.1.0",
       "react-router": "^7.6.2"

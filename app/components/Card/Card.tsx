@@ -1,28 +1,24 @@
 import React from 'react';
 import styles from './Card.module.css';
 import type { r } from 'node_modules/@react-router/dev/dist/routes-DHIOx0R9';
+import type { title } from 'process';
 
 interface CardProps {
-   type: string;
-   thumbnailSrc: string;
-   title: string;
-   author: string;
+   className: string;
+   imgSrc: string;
+   imgAlt: string;
+   children: React.ReactNode;
 }
 export default function Card({
-   type,
-   thumbnailSrc,
-   title,
-   author,
+   className,
+   imgSrc,
+   imgAlt,
+   children,
 }: CardProps) {
    return (
-      <div className={styles.card}>
-         <figure className={styles.figure}>
-            <img src={thumbnailSrc} alt={title} />
-            <div>
-               <p>{title}</p>
-               <p>{author}</p>
-            </div>
-         </figure>
-      </div>
+      <figure className={styles.card}>
+         <img src={imgSrc} alt={imgAlt} className={className} />
+         <div>{children}</div>
+      </figure>
    );
 }

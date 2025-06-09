@@ -1,0 +1,8 @@
+.listItem {
+   list-style: none;
+}
+.trendingPod {
+   width: 256px;
+   height: 256px;
+   border-radius: 4px;
+}

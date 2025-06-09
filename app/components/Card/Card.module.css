@@ -1,8 +1,5 @@
 .card {
    max-width: 200px;
-}
-
-.figure {
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
