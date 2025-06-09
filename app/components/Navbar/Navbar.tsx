@@ -20,7 +20,7 @@ const navItemsData = [
    },
    {
       id: 'podcast',
-      to: '/podcast',
+      to: '/create',
       icon: <PodcastIcon />,
       text: 'Create Podcast',
    },

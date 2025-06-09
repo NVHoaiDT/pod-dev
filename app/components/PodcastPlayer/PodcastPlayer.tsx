@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 function PodcastPlayer() {
-  return <div></div>;
+   return <div></div>;
 }
 
 export default PodcastPlayer;
