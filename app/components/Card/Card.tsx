@@ -16,8 +16,8 @@ export default function Card({
    children,
 }: CardProps) {
    return (
-      <figure className={styles.card}>
-         <img src={imgSrc} alt={imgAlt} className={className} />
+      <figure className={`${styles.card} ${className}`}>
+         <img src={imgSrc} alt={imgAlt} />
          <div>{children}</div>
       </figure>
    );

@@ -1,0 +1,22 @@
+.cardImage {
+   max-width: 200px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   gap: 8px;
+   border-radius: 8px;
+
+   position: relative;
+   overflow: hidden;
+}
+
+.info {
+   position: absolute;
+   bottom: 8px;
+   left: 0;
+   width: 100%;
+   padding: 0px 8px;
+
+   backdrop-filter: blur(10px);
+   color: #ffffff;
+}
