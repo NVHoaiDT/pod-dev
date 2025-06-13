@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './LinkButton.module.css';
-import { text } from 'stream/consumers';
 
 interface LinkButtonProps {
    href?: string;
