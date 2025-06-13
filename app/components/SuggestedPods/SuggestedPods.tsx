@@ -4,13 +4,13 @@ import SuggestedCard from '../SuggestedCard';
 
 function SuggestedPods() {
    return (
-      <div>
+      <section>
          <header>
             <h4>Fan also like</h4>
             <LinkButton>See all</LinkButton>
          </header>
          <SuggestedCard></SuggestedCard>
-      </div>
+      </section>
    );
 }
 

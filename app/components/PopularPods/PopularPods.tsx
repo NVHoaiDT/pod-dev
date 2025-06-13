@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import styles from './PopularPods.module.css';
-import PodCard from '../PodCard';
+import PodCard from '../PodcastCard';
 
 const podsData = [
    {
@@ -35,7 +35,7 @@ const podsData = [
 ];
 function PopularPods() {
    return (
-      <div>
+      <section>
          <h2>Popular Podcasts</h2>
          <ul className={styles.row}>
             {podsData.map(({ podName, imgSrc, imgAlt, author }) => (
@@ -48,7 +48,7 @@ function PopularPods() {
                />
             ))}
          </ul>
-      </div>
+      </section>
    );
 }
 

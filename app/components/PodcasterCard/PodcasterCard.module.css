@@ -1,0 +1,22 @@
+.podcasterCard {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   gap: 8px;
+   white-space: nowrap;
+}
+
+.img {
+   width: 48px;
+   height: 48px;
+   border-radius: 4px;
+}
+
+.info {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   gap: 16px;
+}

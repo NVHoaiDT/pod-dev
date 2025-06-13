@@ -1,0 +1,17 @@
+.listItem {
+   margin: 0;
+   padding: 0 8px;
+   list-style: none;
+}
+.trendingPod {
+   display: flex;
+   flex-direction: column;
+   width: 174x;
+   height: 174x;
+   border-radius: 4px;
+}
+.podCardImg {
+   max-width: 200px;
+   max-height: 200px;
+   border-radius: 8px;
+}

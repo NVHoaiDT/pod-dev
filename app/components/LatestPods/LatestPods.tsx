@@ -23,14 +23,6 @@ const podcastData = [
    },
    {
       thumbnailSrc:
-         'https://plus.unsplash.com/premium_photo-1683309563206-7dab995540fa?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'The News Update',
-      author: 'News Network',
-      totalPlay: 1111,
-      lenght: 15,
-   },
-   {
-      thumbnailSrc:
          'https://images.unsplash.com/photo-1746427397762-0c56f73e8b58?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       title: 'The Music Mix',
       author: 'DJ Mixmaster',
@@ -49,7 +41,7 @@ const podcastData = [
 
 export default function LatestPods() {
    return (
-      <div>
+      <section>
          <header className={styles.header}>
             <h2>Latest Podcasts</h2>
             <div className={styles.actions}>
@@ -78,6 +70,6 @@ export default function LatestPods() {
                )
             )}
          </ul>
-      </div>
+      </section>
    );
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import styles from './TrendingPods.module.css';
-import PodCard from '../PodCard';
+import PodcastCard from '../PodcastCard';
 
 const podsData = [
    {
@@ -35,11 +35,11 @@ const podsData = [
 ];
 function TrendingPods() {
    return (
-      <div>
+      <section>
          <h2>Trending Podcasts</h2>
          <ul className={styles.row}>
             {podsData.map(({ podName, imgSrc, imgAlt, author }) => (
-               <PodCard
+               <PodcastCard
                   key={podName}
                   imgSrc={imgSrc}
                   imgAlt={imgAlt}
@@ -48,7 +48,7 @@ function TrendingPods() {
                />
             ))}
          </ul>
-      </div>
+      </section>
    );
 }
 
