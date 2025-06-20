@@ -3,43 +3,33 @@ import React from 'react';
 import styles from './LatestPods.module.css';
 import LinkButton from '../LinkButton/LinkButton';
 import PodCastRow from '../PodcastRow/PodcastRow';
+import useSWR from 'swr';
 
-const podcastData = [
-   {
-      thumbnailSrc:
-         'https://images.unsplash.com/photo-1657121576415-df1780784ecb?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'The Daily Boost',
-      author: 'Motivation Nation',
-      totalPlay: 1234,
-      lenght: 30,
-   },
-   {
-      thumbnailSrc:
-         'https://images.unsplash.com/photo-1724762866054-bf8e2919924f?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'The Tech Podcast',
-      author: 'Tech Talk',
-      totalPlay: 5678,
-      lenght: 45,
-   },
-   {
-      thumbnailSrc:
-         'https://images.unsplash.com/photo-1746427397762-0c56f73e8b58?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'The Music Mix',
-      author: 'DJ Mixmaster',
-      totalPlay: 2222,
-      lenght: 90,
-   },
-   {
-      thumbnailSrc:
-         'https://images.unsplash.com/photo-1487530811176-3780de880c2d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      title: 'The Comedy Hour',
-      author: 'Laugh Out Loud',
-      totalPlay: 9012,
-      lenght: 60,
-   },
-];
+type Podcast = {
+   _id: string;
+   podName: string;
+   imgSrc: string;
+   imgAlt: string;
+   author: string;
+};
+
+const ENDPOINT = 'http://localhost:3000/main/podcast/latest/';
+async function fetcher(endpoint: string) {
+   const response = await fetch(endpoint);
+   const json = await response.json();
+
+   return json;
+}
 
 export default function LatestPods() {
+   const { data, error, isLoading } = useSWR<Podcast[]>(
+      ENDPOINT,
+      fetcher
+   );
+
+   if (error) return <div>failed to load</div>;
+   if (isLoading) return <div>loading...</div>;
+
    return (
       <section>
          <header className={styles.header}>
@@ -51,24 +41,16 @@ export default function LatestPods() {
          </header>
 
          <ul>
-            {podcastData.map(
-               ({
-                  thumbnailSrc,
-                  title,
-                  author,
-                  totalPlay,
-                  lenght,
-               }) => (
-                  <PodCastRow
-                     key={title}
-                     thumbnailSrc={thumbnailSrc}
-                     title={title}
-                     author={author}
-                     totalPlay={totalPlay}
-                     lenght={lenght}
-                  />
-               )
-            )}
+            {data?.map((podcast) => (
+               <PodCastRow
+                  key={podcast._id}
+                  thumbnailSrc={podcast.imgSrc}
+                  title={podcast.podName}
+                  author={podcast.author}
+                  totalPlay={100}
+                  lenght={100}
+               />
+            ))}
          </ul>
       </section>
    );
