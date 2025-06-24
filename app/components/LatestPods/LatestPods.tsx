@@ -1,9 +1,9 @@
 import React from 'react';
+import useSWR from 'swr';
 
 import styles from './LatestPods.module.css';
 import LinkButton from '../LinkButton/LinkButton';
 import PodCastRow from '../PodcastRow/PodcastRow';
-import useSWR from 'swr';
 
 type Podcast = {
    _id: string;

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import useSWR from 'swr';
 
+import usePodcast from '~/hooks/usePodcast';
 import styles from './TrendingPods.module.css';
 import PodcastCard from '../PodcastCard';
 
@@ -12,20 +12,8 @@ type Podcast = {
    author: string;
 };
 
-//TODO: build a custom hook or something more resuable
-const ENDPOINT = 'http://localhost:3000/main/podcast/latest/';
-async function fetcher(endpoint: string) {
-   const response = await fetch(endpoint);
-   const json = await response.json();
-
-   return json;
-}
-
 function TrendingPods() {
-   const { data, error, isLoading } = useSWR<Podcast[]>(
-      ENDPOINT,
-      fetcher
-   );
+   const { data, error, isLoading } = usePodcast('trending');
 
    if (error) return <div>failed to load</div>;
    if (isLoading) return <div>loading...</div>;
