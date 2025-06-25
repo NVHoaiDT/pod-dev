@@ -4,14 +4,6 @@ import usePodcast from '~/hooks/usePodcast';
 import styles from './TrendingPods.module.css';
 import PodcastCard from '../PodcastCard';
 
-type Podcast = {
-   _id: string;
-   podName: string;
-   imgSrc: string;
-   imgAlt: string;
-   author: string;
-};
-
 function TrendingPods() {
    const { data, error, isLoading } = usePodcast('trending');
 
