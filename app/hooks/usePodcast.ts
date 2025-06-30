@@ -4,9 +4,10 @@ import { fetcher } from '~/utils/fetching';
 
 type Podcast = {
    _id: string;
-   podName: string;
-   imgSrc: string;
-   imgAlt: string;
+   title: string;
+   thumbnailSrc: string;
+   thumbnailAlt: string;
+   totalListened: number;
    author: string;
 };
 

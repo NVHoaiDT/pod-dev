@@ -13,15 +13,18 @@ function PopularPods() {
       <section>
          <h2>Popular Podcasts</h2>
          <ul className={styles.row}>
-            {data?.map(({ _id, podName, imgSrc, imgAlt, author }) => (
-               <PodCard
-                  key={_id}
-                  imgSrc={imgSrc}
-                  imgAlt={imgAlt}
-                  podName={podName}
-                  author={author}
-               />
-            ))}
+            {data?.map(
+               ({ _id, title, thumbnailAlt, thumbnailSrc }) => (
+                  <PodCard
+                     key={_id}
+                     podName={title}
+                     imgSrc={thumbnailSrc}
+                     imgAlt={thumbnailAlt}
+                     // this one should be handled latter
+                     author={'TEMP'}
+                  />
+               )
+            )}
          </ul>
       </section>
    );

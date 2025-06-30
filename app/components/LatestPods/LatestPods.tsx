@@ -1,19 +1,10 @@
 import React from 'react';
-import useSWR from 'swr';
+import usePodcast from '~/hooks/usePodcast';
 
 import styles from './LatestPods.module.css';
 import LinkButton from '../LinkButton/LinkButton';
 import PodCastRow from '../PodcastRow/PodcastRow';
 
-type Podcast = {
-   _id: string;
-   podName: string;
-   imgSrc: string;
-   imgAlt: string;
-   author: string;
-};
-
-const ENDPOINT = 'http://localhost:3000/main/podcast/latest/';
 async function fetcher(endpoint: string) {
    const response = await fetch(endpoint);
    const json = await response.json();
@@ -22,14 +13,12 @@ async function fetcher(endpoint: string) {
 }
 
 export default function LatestPods() {
-   const { data, error, isLoading } = useSWR<Podcast[]>(
-      ENDPOINT,
-      fetcher
-   );
+   const { data, error, isLoading } = usePodcast('latest');
 
    if (error) return <div>failed to load</div>;
    if (isLoading) return <div>loading...</div>;
 
+   console.log(data);
    return (
       <section>
          <header className={styles.header}>
@@ -41,16 +30,26 @@ export default function LatestPods() {
          </header>
 
          <ul>
-            {data?.map((podcast) => (
-               <PodCastRow
-                  key={podcast._id}
-                  thumbnailSrc={podcast.imgSrc}
-                  title={podcast.podName}
-                  author={podcast.author}
-                  totalPlay={100}
-                  lenght={100}
-               />
-            ))}
+            {data?.map(
+               ({
+                  _id,
+                  title,
+                  thumbnailAlt,
+                  thumbnailSrc,
+                  totalListened,
+               }) => (
+                  <PodCastRow
+                     key={_id}
+                     thumbnailSrc={thumbnailSrc}
+                     thumbnailAlt={thumbnailAlt}
+                     title={title}
+                     // this one should be handled latter...
+                     author={'TEMP'}
+                     totalListened={totalListened}
+                     lenght={100}
+                  />
+               )
+            )}
          </ul>
       </section>
    );

@@ -9,17 +9,19 @@ import {
 } from '../../libs/icons';
 interface PodCastRowProps {
    thumbnailSrc: string;
+   thumbnailAlt: string;
    title: string;
    author: string;
-   totalPlay: number;
+   totalListened: number;
    lenght: number;
 }
 
 export default function PodCastRow({
    thumbnailSrc,
+   thumbnailAlt,
    title,
    author,
-   totalPlay,
+   totalListened,
    lenght,
 }: PodCastRowProps) {
    return (
@@ -30,7 +32,7 @@ export default function PodCastRow({
             <figure className={styles.figure}>
                <img
                   src={thumbnailSrc}
-                  alt={title}
+                  alt={thumbnailAlt}
                   className={styles.thumbnail}
                />
                <div>
@@ -42,7 +44,7 @@ export default function PodCastRow({
          <div className={styles.stats}>
             <div className={styles.stat}>
                <HeadphonesIcon></HeadphonesIcon>
-               <span>{totalPlay}</span>
+               <span>{totalListened}</span>
             </div>
             <div className={styles.stat}>
                <ClockIcon></ClockIcon>
