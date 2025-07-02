@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 
 import { fetcher } from '~/utils/fetching';
-
+import formatSeconds from '~/helpers/format-time';
 type Podcast = {
    _id: string;
    title: string;

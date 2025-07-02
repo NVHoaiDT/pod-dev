@@ -5,6 +5,8 @@ import styles from './LatestPods.module.css';
 import LinkButton from '../LinkButton/LinkButton';
 import PodCastRow from '../PodcastRow/PodcastRow';
 
+import formatSeconds from '~/helpers/format-time';
+
 async function fetcher(endpoint: string) {
    const response = await fetch(endpoint);
    const json = await response.json();
@@ -46,7 +48,7 @@ export default function LatestPods() {
                      // this one should be handled latter...
                      author={'TEMP'}
                      totalListened={totalListened}
-                     lenght={100}
+                     lenght={formatSeconds(totalListened).toString()}
                   />
                )
             )}

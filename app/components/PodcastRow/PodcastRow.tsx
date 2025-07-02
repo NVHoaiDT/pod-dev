@@ -13,7 +13,7 @@ interface PodCastRowProps {
    title: string;
    author: string;
    totalListened: number;
-   lenght: number;
+   lenght: string;
 }
 
 export default function PodCastRow({
