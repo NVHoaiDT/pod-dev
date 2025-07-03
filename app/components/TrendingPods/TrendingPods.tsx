@@ -14,15 +14,23 @@ function TrendingPods() {
       <section>
          <h2>Trending Podcasts</h2>
          <ul className={styles.row}>
-            {data?.map(({ _id, imgSrc, imgAlt, podName, author }) => (
-               <PodcastCard
-                  key={_id}
-                  imgSrc={imgSrc}
-                  imgAlt={imgAlt}
-                  podName={podName}
-                  author={author}
-               />
-            ))}
+            {data?.map(
+               ({
+                  _id,
+                  thumbnailSrc,
+                  thumbnailAlt,
+                  title,
+                  author,
+               }) => (
+                  <PodcastCard
+                     key={_id}
+                     imgSrc={thumbnailSrc}
+                     imgAlt={thumbnailAlt}
+                     podName={title}
+                     author={author}
+                  />
+               )
+            )}
          </ul>
       </section>
    );
