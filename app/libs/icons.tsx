@@ -172,3 +172,142 @@ export const MenuDotsIcon = ({
       </g>
    </svg>
 );
+
+export const PauseIcon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <path
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentColor"
+         d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+      />
+   </svg>
+);
+
+export const PlayIcon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <path
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentColor"
+         d="M18.54 9L8.88 3.46a3.42 3.42 0 0 0-5.13 3v11.12A3.42 3.42 0 0 0 7.17 21a3.43 3.43 0 0 0 1.71-.46L18.54 15a3.42 3.42 0 0 0 0-5.92Zm-1 4.19l-9.66 5.62a1.44 1.44 0 0 1-1.42 0a1.42 1.42 0 0 1-.71-1.23V6.42a1.42 1.42 0 0 1 .71-1.23A1.51 1.51 0 0 1 7.17 5a1.54 1.54 0 0 1 .71.19l9.66 5.58a1.42 1.42 0 0 1 0 2.46Z"
+      />
+   </svg>
+);
+
+export const ShuffleIcon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <g
+         xmlns="http://www.w3.org/2000/svg"
+         fill="none"
+         stroke="currentColor"
+         strokeLinecap="round"
+         strokeLinejoin="round"
+         stroke-width="2"
+      >
+         <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22" />
+         <path d="m18 2l4 4l-4 4M2 6h1.9c1.5 0 2.9.9 3.6 2.2M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8" />
+         <path d="m18 14l4 4l-4 4" />
+      </g>
+   </svg>
+);
+
+export const PlayNextFillIcon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <path
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentColor"
+         fill-rule="evenodd"
+         d="M2.538 4.113a1 1 0 0 1 1.035.068l10 7a1 1 0 0 1 0 1.638l-10 7A1 1 0 0 1 2 19V5a1 1 0 0 1 .538-.887M16 5.8A1.8 1.8 0 0 1 17.8 4h1.4A1.8 1.8 0 0 1 21 5.8v12.4a1.8 1.8 0 0 1-1.8 1.8h-1.4a1.8 1.8 0 0 1-1.8-1.8z"
+         clip-rule="evenodd"
+      />
+   </svg>
+);
+
+export const PlayBackIcon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <path
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentColor"
+         d="m30.71 229.47l188.87-113a30.54 30.54 0 0 1 31.09-.39a33.74 33.74 0 0 1 16.76 29.47v79.05l180.72-108.16a30.54 30.54 0 0 1 31.09-.39A33.74 33.74 0 0 1 496 145.52v221A33.73 33.73 0 0 1 479.24 396a30.54 30.54 0 0 1-31.09-.39L267.43 287.4v79.08A33.73 33.73 0 0 1 250.67 396a30.54 30.54 0 0 1-31.09-.39l-188.87-113a31.27 31.27 0 0 1 0-53Z"
+      />
+   </svg>
+);
+
+export const Volume2Icon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <path
+         xmlns="http://www.w3.org/2000/svg"
+         fill="none"
+         stroke="currentColor"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="2"
+         d="M11 5L6 9H2v6h4l5 4V5zm8.07-.07a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"
+      />
+   </svg>
+);

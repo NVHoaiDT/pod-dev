@@ -1,0 +1,28 @@
+.podcastPlayer {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0px 64px;
+   box-sizing: border-box;
+   backdrop-filter: blur(10px);
+}
+
+.info,
+.controls,
+.progress {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+.controls {
+   justify-content: space-between;
+   gap: 48px;
+}
+.progress {
+   gap: 16px;
+}
