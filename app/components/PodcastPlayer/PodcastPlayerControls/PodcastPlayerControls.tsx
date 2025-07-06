@@ -24,22 +24,6 @@ function PodcastPlayerControls({
    handleNext,
    handlePrevious,
 }: PodcastPlayerProps) {
-   //for demo
-   const audioSrc =
-      'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
-   const audioRef = React.useRef<HTMLAudioElement>(
-      new Audio(audioSrc)
-   );
-
-   // play/pause audio
-   React.useEffect(() => {
-      if (isPlaying) {
-         audioRef.current.play();
-      } else {
-         audioRef.current.pause();
-      }
-   }, [isPlaying]);
-
    return (
       <div className={styles.controls}>
          <button className={styles.shuffleButton}>

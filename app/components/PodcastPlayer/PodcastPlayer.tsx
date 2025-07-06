@@ -24,8 +24,32 @@ type PodcasterPlayerProps = {
    totalListened: number;
    author: string;
 };
+
+//for demo
+const audioSrc =
+   'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
 function PodcastPlayer() {
+   const audioRef = React.useRef<undefined | HTMLAudioElement>(
+      undefined
+   );
+   const audioCurrentTimeRef = React.useRef(0);
+
    const [isPlaying, togglePlayPause] = useToggle(false);
+
+   // play/pause audio
+   React.useEffect(() => {
+      audioRef.current = new Audio(audioSrc);
+   }, []);
+   React.useEffect(() => {
+      if (isPlaying) {
+         audioRef.current?.play();
+      } else {
+         audioRef.current?.pause();
+      }
+   }, [isPlaying]);
+
+   // forward, backward
+   React.useEffect(() => {});
    function handleNext() {}
    function handlePrevious() {}
 
