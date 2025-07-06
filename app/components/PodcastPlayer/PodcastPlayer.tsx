@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import styles from './PodcastPlayer.module.css';
+import PodcastPlayerControls from './PodcastPlayerControls';
 import {
    PauseIcon,
    PlayIcon,
@@ -9,6 +10,7 @@ import {
    PlayBackIcon,
    Volume2Icon,
 } from '../../libs/icons';
+import useToggle from '~/hooks/useToggle';
 
 /* 
    output: a podcast player with play/pause toggle, forward/backward buttons, and volume control   
@@ -23,6 +25,10 @@ type PodcasterPlayerProps = {
    author: string;
 };
 function PodcastPlayer() {
+   const [isPlaying, togglePlayPause] = useToggle(false);
+   function handleNext() {}
+   function handlePrevious() {}
+
    return (
       //  the two approachs:
       //       1. create a brand-new individual component for each part of the player
@@ -37,12 +43,12 @@ function PodcastPlayer() {
             </div>
          </div>
 
-         <div className={styles.controls}>
-            <ShuffleIcon color="#fffff" />
-            <PlayBackIcon />
-            <PauseIcon />
-            <PlayNextFillIcon />
-         </div>
+         <PodcastPlayerControls
+            isPlaying={isPlaying}
+            handlePlayPause={togglePlayPause}
+            handleNext={handleNext}
+            handlePrevious={handlePrevious}
+         ></PodcastPlayerControls>
 
          <div className={styles.progress}>
             <p>{'1:45/4:42'}</p>
