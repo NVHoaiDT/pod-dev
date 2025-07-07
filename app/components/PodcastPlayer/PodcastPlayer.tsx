@@ -2,19 +2,8 @@ import * as React from 'react';
 
 import styles from './PodcastPlayer.module.css';
 import PodcastPlayerControls from './PodcastPlayerControls';
-import {
-   PauseIcon,
-   PlayIcon,
-   ShuffleIcon,
-   PlayNextFillIcon,
-   PlayBackIcon,
-   Volume2Icon,
-} from '../../libs/icons';
+import { Volume2Icon } from '../../libs/icons';
 import useToggle from '~/hooks/useToggle';
-
-/* 
-   output: a podcast player with play/pause toggle, forward/backward buttons, and volume control   
-*/
 
 type PodcasterPlayerProps = {
    _id: string;
@@ -32,14 +21,44 @@ function PodcastPlayer() {
    const audioRef = React.useRef<undefined | HTMLAudioElement>(
       undefined
    );
-   const audioCurrentTimeRef = React.useRef(0);
 
    const [isPlaying, togglePlayPause] = useToggle(false);
+   const [currentTime, setCurrentTime] = React.useState(0);
+   const [duration, setDuration] = React.useState(0);
 
-   // play/pause audio
+   //diliver from state
+
    React.useEffect(() => {
       audioRef.current = new Audio(audioSrc);
+      const handleTimeUpdate = () => {
+         setCurrentTime(audioRef.current?.currentTime || 0);
+      };
+
+      const handleMetadataLoaded = () => {
+         setDuration(audioRef.current?.duration || 0);
+      };
+      audioRef.current.addEventListener(
+         'timeupdate',
+         handleTimeUpdate
+      );
+
+      audioRef.current.addEventListener(
+         'loadedmetadata',
+         handleMetadataLoaded
+      );
+      return () => {
+         audioRef.current?.removeEventListener(
+            'timeupdate',
+            handleTimeUpdate
+         );
+
+         audioRef.current?.removeEventListener(
+            'loadedmetadata',
+            handleMetadataLoaded
+         );
+      };
    }, []);
+
    React.useEffect(() => {
       if (isPlaying) {
          audioRef.current?.play();
@@ -54,10 +73,6 @@ function PodcastPlayer() {
    function handlePrevious() {}
 
    return (
-      //  the two approachs:
-      //       1. create a brand-new individual component for each part of the player
-      //       2. embed all the parts of the player into this component
-
       <div className={styles.podcastPlayer}>
          <div className={styles.info}>
             <img src="" alt="" />
@@ -75,7 +90,9 @@ function PodcastPlayer() {
          ></PodcastPlayerControls>
 
          <div className={styles.progress}>
-            <p>{'1:45/4:42'}</p>
+            <p>
+               {Math.floor(currentTime)}/{duration}
+            </p>
             <Volume2Icon />
          </div>
       </div>
