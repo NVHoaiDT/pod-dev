@@ -1,25 +1,25 @@
 import * as React from 'react';
 
+import useToggle from '~/hooks/useToggle';
 import styles from './PodcastPlayer.module.css';
 import PodcastPlayerControls from './PodcastPlayerControls';
-import { Volume2Icon } from '../../libs/icons';
-import useToggle from '~/hooks/useToggle';
 
 type PodcasterPlayerProps = {
-   _id: string;
    title: string;
    thumbnailSrc: string;
    thumbnailAlt: string;
-   totalListened: number;
+   audioSrc: string;
    author: string;
 };
 
-//for demo
-const audioSrc =
-   'https://res.cloudinary.com/djwpst00v/video/upload/v1751867058/BBC-Noodles_yf7tn0.mp3';
-
-// !!!!!!!!!!!!!!!!! A LOT OF STUFF NEED TO MEMO !!!!!!!!!!!!!!!!!
-function PodcastPlayer() {
+// !!!!!!!!!!!!!!!!! A LOT OF STUFF NEED TO BE MEMO !!!!!!!!!!!!!!!!!
+function PodcastPlayer({
+   title,
+   thumbnailSrc,
+   thumbnailAlt,
+   audioSrc,
+   author,
+}: PodcasterPlayerProps) {
    const audioRef = React.useRef<undefined | HTMLAudioElement>(
       undefined
    );
@@ -33,7 +33,14 @@ function PodcastPlayer() {
 
    //initial audio setup
    React.useEffect(() => {
+      // cleanup previous Audio instance
+      if (audioRef.current) {
+         audioRef.current.pause();
+         audioRef.current = undefined;
+      }
+
       audioRef.current = new Audio(audioSrc);
+
       const handleTimeUpdate = () => {
          setCurrentTime(audioRef.current?.currentTime || 0);
       };
@@ -41,15 +48,18 @@ function PodcastPlayer() {
       const handleMetadataLoaded = () => {
          setDuration(audioRef.current?.duration || 0);
       };
+      //track current time
       audioRef.current.addEventListener(
          'timeupdate',
          handleTimeUpdate
       );
 
+      //load duration
       audioRef.current.addEventListener(
          'loadedmetadata',
          handleMetadataLoaded
       );
+
       return () => {
          audioRef.current?.removeEventListener(
             'timeupdate',
@@ -61,7 +71,7 @@ function PodcastPlayer() {
             handleMetadataLoaded
          );
       };
-   }, []);
+   }, [audioSrc]);
 
    //play/pause
    React.useEffect(() => {
@@ -94,10 +104,14 @@ function PodcastPlayer() {
    return (
       <div className={styles.podcastPlayer}>
          <div className={styles.info}>
-            <img src="" alt="" />
+            <img
+               src={thumbnailSrc}
+               alt={thumbnailAlt}
+               className={styles.thumbnail}
+            />
             <div>
-               <h3>{'Title'}</h3>
-               <p>{'author'}</p>
+               <h3>{title}</h3>
+               <p>{author}</p>
             </div>
          </div>
 

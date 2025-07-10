@@ -7,13 +7,6 @@ import PodCastRow from '../PodcastRow/PodcastRow';
 
 import formatSeconds from '~/helpers/format-time';
 
-async function fetcher(endpoint: string) {
-   const response = await fetch(endpoint);
-   const json = await response.json();
-
-   return json;
-}
-
 export default function LatestPods() {
    const { data, error, isLoading } = usePodcast('latest');
 
@@ -35,17 +28,19 @@ export default function LatestPods() {
                ({
                   _id,
                   title,
+                  author,
                   thumbnailAlt,
                   thumbnailSrc,
+                  audioSrc,
                   totalListened,
                }) => (
                   <PodCastRow
                      key={_id}
                      thumbnailSrc={thumbnailSrc}
                      thumbnailAlt={thumbnailAlt}
+                     audioSrc={audioSrc}
                      title={title}
-                     // this one should be handled latter...
-                     author={'TEMP'}
+                     author={author}
                      totalListened={totalListened}
                      lenght={formatSeconds(totalListened).toString()}
                   />
