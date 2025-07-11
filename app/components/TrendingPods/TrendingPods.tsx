@@ -19,6 +19,7 @@ function TrendingPods() {
                   _id,
                   thumbnailSrc,
                   thumbnailAlt,
+                  audioSrc,
                   title,
                   author,
                }) => (
@@ -26,6 +27,7 @@ function TrendingPods() {
                      key={_id}
                      imgSrc={thumbnailSrc}
                      imgAlt={thumbnailAlt}
+                     audioSrc={audioSrc}
                      podName={title}
                      author={author}
                   />

@@ -7,6 +7,7 @@ type Podcast = {
    title: string;
    thumbnailSrc: string;
    thumbnailAlt: string;
+   audioSrc: string;
    totalListened: number;
    author: string;
 };

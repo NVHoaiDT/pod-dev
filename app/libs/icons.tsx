@@ -234,11 +234,39 @@ export const ShuffleIcon = ({
          stroke="currentColor"
          strokeLinecap="round"
          strokeLinejoin="round"
-         stroke-width="2"
+         strokeWidth="2"
       >
          <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22" />
          <path d="m18 2l4 4l-4 4M2 6h1.9c1.5 0 2.9.9 3.6 2.2M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8" />
          <path d="m18 14l4 4l-4 4" />
+      </g>
+   </svg>
+);
+
+export const RepeatIcon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <g
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentColor"
+         fillRule="evenodd"
+         clipRule="evenodd"
+      >
+         <path d="M14.519 2.749a.75.75 0 0 1 1.052.13l1.547 1.982a.75.75 0 1 1-1.183.923L14.39 3.8a.75.75 0 0 1 .13-1.052Z" />
+         <path d="M16.983 4.727a.75.75 0 0 0-1.052.14l-1.546 2.017a.75.75 0 1 0 1.19.912l1.547-2.017a.75.75 0 0 0-.14-1.052Z" />
+         <path d="M2.48 9.323a5 5 0 0 1 5-5h7.86a1 1 0 1 1 0 2H7.48a3 3 0 0 0-3 3v1a1 1 0 1 1-2 0v-1Zm3.008 7.928a.75.75 0 0 1-1.053-.13L2.89 15.14a.75.75 0 1 1 1.182-.923L5.619 16.2a.75.75 0 0 1-.13 1.052Z" />
+         <path d="M3.024 15.273a.75.75 0 0 0 1.051-.14l1.547-2.017a.75.75 0 0 0-1.19-.912L2.884 14.22a.75.75 0 0 0 .139 1.052Z" />
+         <path d="M17.526 10.677a5 5 0 0 1-5 5h-7.86a1 1 0 1 1 0-2h7.86a3 3 0 0 0 3-3v-1a1 1 0 1 1 2 0v1Z" />
       </g>
    </svg>
 );
@@ -259,9 +287,9 @@ export const PlayNextFillIcon = ({
       <path
          xmlns="http://www.w3.org/2000/svg"
          fill="currentColor"
-         fill-rule="evenodd"
+         fillRule="evenodd"
          d="M2.538 4.113a1 1 0 0 1 1.035.068l10 7a1 1 0 0 1 0 1.638l-10 7A1 1 0 0 1 2 19V5a1 1 0 0 1 .538-.887M16 5.8A1.8 1.8 0 0 1 17.8 4h1.4A1.8 1.8 0 0 1 21 5.8v12.4a1.8 1.8 0 0 1-1.8 1.8h-1.4a1.8 1.8 0 0 1-1.8-1.8z"
-         clip-rule="evenodd"
+         clipRule="evenodd"
       />
    </svg>
 );
@@ -304,10 +332,31 @@ export const Volume2Icon = ({
          xmlns="http://www.w3.org/2000/svg"
          fill="none"
          stroke="currentColor"
-         stroke-linecap="round"
-         stroke-linejoin="round"
-         stroke-width="2"
+         strokeLinecap="round"
+         strokeLinejoin="round"
+         strokeWidth="2"
          d="M11 5L6 9H2v6h4l5 4V5zm8.07-.07a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"
+      />
+   </svg>
+);
+
+export const MutedSpeakerIcon = ({
+   size = 24,
+   color = 'currentColor',
+   ...props
+}) => (
+   <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill={color}
+      {...props}
+   >
+      <path
+         xmlns="http://www.w3.org/2000/svg"
+         fill="currentColor"
+         d="m19.036 20.718l5.933 5.934a1.189 1.189 0 1 0 1.682-1.683L6.83 5.15a1.19 1.19 0 0 0-1.68 1.683L7.318 9H3.803C2.807 9 2 9.847 2 10.892v10.216C2 22.153 2.807 23 3.803 23l4.195.001l8.613 3.83a1.693 1.693 0 0 0 2.425-1.526v-4.587Zm-2-2v6.113l-7.038-3.13V11.68l7.038 7.038ZM22 16.023c0 .504-.122.979-.337 1.397l-4.627-4.627v-5.76l-.03-.001a.38.38 0 0 0-.113.013h-.002l-3.81 1.793l-1.504-1.503l4.47-2.103c1.123-.529 2.989.023 2.989 1.265v6.473A3.055 3.055 0 0 1 22 16.023Z"
       />
    </svg>
 );

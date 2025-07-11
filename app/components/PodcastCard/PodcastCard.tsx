@@ -3,18 +3,20 @@ import * as React from 'react';
 import styles from './PodcastCard.module.css';
 import Card from '../Card/Card';
 
-interface podcastCardProps {
+interface PodcastCardProps {
    imgSrc: string;
    imgAlt: string;
    podName: string;
    author: string;
+   audioSrc: string;
 }
 function PodcastCard({
    imgSrc,
    imgAlt,
    podName,
    author,
-}: podcastCardProps) {
+   audioSrc,
+}: PodcastCardProps) {
    return (
       <li className={styles.listItem}>
          <Card
