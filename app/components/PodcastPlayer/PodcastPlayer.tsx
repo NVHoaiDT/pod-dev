@@ -33,7 +33,7 @@ function PodcastPlayer({
 
    //initial audio setup
    React.useEffect(() => {
-      // cleanup previous Audio instance
+      // cleanup previous Audio instance - better to handle in cleanup function
       if (audioRef.current) {
          audioRef.current.pause();
          audioRef.current = undefined;
