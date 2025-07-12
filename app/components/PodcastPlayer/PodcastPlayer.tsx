@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import useToggle from '~/hooks/useToggle';
+import Slider from '../Slider';
 import styles from './PodcastPlayer.module.css';
 import PodcastPlayerControls from './PodcastPlayerControls';
 
@@ -31,30 +32,28 @@ function PodcastPlayer({
    const [volume, setVolume] = React.useState(1);
    const [isMuted, toggleIsMuted] = useToggle(false);
 
+   console.log(isPlaying);
    //initial audio setup
    React.useEffect(() => {
-      // cleanup previous Audio instance - better to handle in cleanup function
-      if (audioRef.current) {
-         audioRef.current.pause();
-         audioRef.current = undefined;
-      }
-
       audioRef.current = new Audio(audioSrc);
+      // Sync the play/pause state from previous render
+      if (isPlaying) {
+         audioRef.current?.play();
+      }
+      // To immediately update the current time wihtout waiting for the audio to load
+      setCurrentTime(0);
 
       const handleTimeUpdate = () => {
          setCurrentTime(audioRef.current?.currentTime || 0);
       };
-
       const handleMetadataLoaded = () => {
          setDuration(audioRef.current?.duration || 0);
       };
-      //track current time
+
       audioRef.current.addEventListener(
          'timeupdate',
          handleTimeUpdate
       );
-
-      //load duration
       audioRef.current.addEventListener(
          'loadedmetadata',
          handleMetadataLoaded
@@ -65,11 +64,13 @@ function PodcastPlayer({
             'timeupdate',
             handleTimeUpdate
          );
-
          audioRef.current?.removeEventListener(
             'loadedmetadata',
             handleMetadataLoaded
          );
+
+         audioRef.current?.pause();
+         audioRef.current?.remove();
       };
    }, [audioSrc]);
 
@@ -126,6 +127,7 @@ function PodcastPlayer({
             isMuted={isMuted}
             handleIsMuted={toggleIsMuted}
          ></PodcastPlayerControls>
+         <Slider></Slider>
       </div>
    );
 }
