@@ -23,7 +23,7 @@ export default function LatestPods() {
             </div>
          </header>
 
-         <ul>
+         <ul className={styles.list}>
             {data?.map(
                ({
                   _id,
