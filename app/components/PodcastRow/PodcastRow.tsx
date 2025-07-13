@@ -42,7 +42,6 @@ export default function PodCastRow({
          }}
       >
          <li className={styles.row}>
-            {/* yes we have some stuff here */}
             <div className={styles.pod}>
                <div>01</div>
                <figure className={styles.figure}>
@@ -59,7 +58,7 @@ export default function PodCastRow({
             </div>
             <div className={styles.stats}>
                <div className={styles.stat}>
-                  <HeadphonesIcon></HeadphonesIcon>
+                  <HeadphonesIcon color={'#fff'} />
                   <span>{totalListened}</span>
                </div>
                <div className={styles.stat}>

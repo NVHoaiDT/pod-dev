@@ -6,8 +6,9 @@ import {
    Scripts,
    ScrollRestoration,
 } from 'react-router';
-
 import type { Route } from './+types/root';
+
+import { LIGHT_TOKENS, DARK_TOKENS } from 'colors';
 import './app.css';
 
 export const links: Route.LinksFunction = () => [
@@ -25,7 +26,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
    return (
-      <html lang="en">
+      <html lang="en" style={DARK_TOKENS as Record<string, string>}>
          <head>
             <meta charSet="utf-8" />
             <meta
@@ -59,7 +60,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
          error.status === 404
             ? 'The requested page could not be found.'
             : error.statusText || details;
-   } else if (import.meta.env.DEV && error && error instanceof Error) {
+   } else if (
+      import.meta.env.DEV &&
+      error &&
+      error instanceof Error
+   ) {
       details = error.message;
       stack = error.stack;
    }

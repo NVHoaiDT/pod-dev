@@ -1,3 +1,7 @@
+button {
+   width: 100%;
+}
+
 .row {
    display: flex;
    flex-direction: row;
