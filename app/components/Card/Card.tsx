@@ -1,7 +1,6 @@
 import React from 'react';
+
 import styles from './Card.module.css';
-import type { r } from 'node_modules/@react-router/dev/dist/routes-DHIOx0R9';
-import type { title } from 'process';
 
 interface CardProps {
    className?: string;

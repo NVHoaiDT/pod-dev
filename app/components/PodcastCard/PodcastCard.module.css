@@ -6,9 +6,7 @@
 .trendingPod {
    display: flex;
    flex-direction: column;
-   width: 174x;
-   height: 174x;
-   border-radius: 4px;
+   gap: 100px;
 }
 .podCardImg {
    max-width: 200px;

@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import usePodcast from '~/hooks/usePodcast';
+
 import styles from './TrendingPods.module.css';
 import PodcastCard from '../PodcastCard';
 
@@ -11,7 +12,7 @@ function TrendingPods() {
    if (isLoading) return <div>loading...</div>;
 
    return (
-      <section>
+      <section className={styles.section}>
          <h2>Trending Podcasts</h2>
          <ul className={styles.row}>
             {data?.map(
