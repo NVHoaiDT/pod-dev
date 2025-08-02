@@ -2,9 +2,12 @@
    position: relative;
    display: grid;
    grid-template-columns: 2fr 1fr;
-   gap: 128px;
+   gap: 96px;
 }
 
 .main {
    overflow-x: hidden;
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
 }

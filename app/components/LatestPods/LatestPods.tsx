@@ -7,19 +7,24 @@ import PodCastRow from '../PodcastRow/PodcastRow';
 
 import formatSeconds from '~/helpers/format-time';
 
-export default function LatestPods() {
+function LatestPods() {
    const { data, error, isLoading } = usePodcast('latest');
 
    if (error) return <div>failed to load</div>;
    if (isLoading) return <div>loading...</div>;
 
    return (
-      <section>
+      <section className={styles.section}>
          <header className={styles.header}>
-            <h2>Latest Podcasts</h2>
+            <h3>Latest Podcasts</h3>
             <div className={styles.actions}>
-               <LinkButton>Sort</LinkButton>
-               <LinkButton href="/latest-pods">Podcast</LinkButton>
+               <LinkButton className={styles.action}>Sort</LinkButton>
+               <LinkButton
+                  className={styles.action}
+                  href="/latest-pods"
+               >
+                  Podcast
+               </LinkButton>
             </div>
          </header>
 
@@ -50,3 +55,4 @@ export default function LatestPods() {
       </section>
    );
 }
+export default LatestPods;

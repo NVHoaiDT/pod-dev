@@ -29,6 +29,7 @@ export const LIGHT_COLORS: Record<string, string> = {
 
 export const DARK_COLORS: Record<string, string> = {
    '--color-text': '#ffffff',
+   '--color-text-secondary': '#adb5bd',
 
    '--color-primary-100': '#fff2e0',
    '--color-primary-300': '#ffd966',
@@ -89,8 +90,7 @@ DARK_COLORS['--color-secondary'] =
 
 DARK_COLORS['--color-selection-text'] = 'white';
 
-DARK_COLORS['--color-backdrop'] =
-   DARK_COLORS['--color-decorative-100'];
+DARK_COLORS['--color-backdrop'] = '#15171C';
 
 DARK_COLORS['--color-backdrop-highlight'] =
    DARK_COLORS['--color-decorative-500'];

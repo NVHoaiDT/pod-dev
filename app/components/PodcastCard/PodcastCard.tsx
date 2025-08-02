@@ -26,8 +26,8 @@ function PodcastCard({
             imgClassName={styles.podCardImg}
          >
             <>
-               <h4>{podName}</h4>
-               <p>{author}</p>
+               <h5 className={styles.title}>{podName}</h5>
+               <p className={styles.author}>{author}</p>
             </>
          </Card>
       </li>

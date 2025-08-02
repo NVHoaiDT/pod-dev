@@ -7,6 +7,8 @@ import {
    ClockIcon,
    MenuDotsIcon,
 } from '../../libs/icons';
+import Card from '../Card/Card';
+
 interface PodCastRowProps {
    thumbnailSrc: string;
    thumbnailAlt: string;
@@ -30,7 +32,8 @@ export default function PodCastRow({
       CurrentPodcastContext
    );
    return (
-      <button
+      <li
+         className={styles.row}
          onClick={() => {
             handleChangePodcast(
                title,
@@ -41,33 +44,35 @@ export default function PodCastRow({
             );
          }}
       >
-         <li className={styles.row}>
+         <button className={styles.item}>
+            <div className={styles.ranking}>01</div>
+
             <div className={styles.pod}>
-               <div>01</div>
-               <figure className={styles.figure}>
-                  <img
-                     src={thumbnailSrc}
-                     alt={thumbnailAlt}
-                     className={styles.thumbnail}
-                  />
-                  <div>
+               <Card
+                  className={styles.podTitle}
+                  imgClassName={styles.thumbnail}
+                  imgSrc={thumbnailSrc}
+                  imgAlt={thumbnailAlt}
+               >
+                  <>
                      <h5>{title}</h5>
                      <p>{author}</p>
+                  </>
+               </Card>
+
+               <div className={styles.stats}>
+                  <div className={styles.stat}>
+                     <HeadphonesIcon color={'#fff'} />
+                     <span>{totalListened}</span>
                   </div>
-               </figure>
-            </div>
-            <div className={styles.stats}>
-               <div className={styles.stat}>
-                  <HeadphonesIcon color={'#fff'} />
-                  <span>{totalListened}</span>
+                  <div className={styles.stat}>
+                     <ClockIcon></ClockIcon>
+                     <span>{lenght}</span>
+                  </div>
+                  <MenuDotsIcon></MenuDotsIcon>
                </div>
-               <div className={styles.stat}>
-                  <ClockIcon></ClockIcon>
-                  <span>{lenght}</span>
-               </div>
-               <MenuDotsIcon></MenuDotsIcon>
             </div>
-         </li>
-      </button>
+         </button>
+      </li>
    );
 }

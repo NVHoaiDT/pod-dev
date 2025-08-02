@@ -6,10 +6,18 @@
 .trendingPod {
    display: flex;
    flex-direction: column;
-   gap: 100px;
+   gap: 8px;
 }
 .podCardImg {
-   max-width: 200px;
-   max-height: 200px;
+   width: 174px;
+   height: 174px;
+   object-fit: cover;
    border-radius: 8px;
+}
+
+.title {
+   color: var(--color-text-secondary);
+}
+.author {
+   color: var(--color-text-secondary);
 }

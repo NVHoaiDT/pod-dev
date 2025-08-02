@@ -13,7 +13,7 @@ function TrendingPods() {
 
    return (
       <section className={styles.section}>
-         <h2>Trending Podcasts</h2>
+         <h3>Trending Podcasts</h3>
          <ul className={styles.row}>
             {data?.map(
                ({
