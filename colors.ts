@@ -104,6 +104,8 @@ DARK_COLORS['--color-card-background'] =
 
 DARK_COLORS['--color-card-border'] =
    DARK_COLORS['--color-page-border'];
+DARK_COLORS['color-hover-background'] =
+   'linear-gradient(232deg, rgba(28, 28, 35, 0.41) 0%, rgba(19, 22, 28, 0.70) 100%)';
 
 export const LIGHT_SHADOWS = {
    '--shadow-page': `

@@ -21,7 +21,6 @@ export default function NavItem({
       <li className={styles.navItem}>
          <a
             href={to}
-            target="_blank"
             className={`${styles.link} ${className}`}
             style={style}
          >
