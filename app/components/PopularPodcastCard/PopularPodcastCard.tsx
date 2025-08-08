@@ -1,29 +1,29 @@
 import * as React from 'react';
 
-import styles from './PodcastCard.module.css';
+import styles from './PopularPodcastCard.module.css';
 import Card from '../Card/Card';
 
-interface PodcastCardProps {
+interface PopularPodcastCardProps {
    imgSrc: string;
    imgAlt: string;
    podName: string;
    author: string;
    audioSrc: string;
 }
-function PodcastCard({
+function PopularPodcastCard({
    imgSrc,
    imgAlt,
    podName,
    author,
    audioSrc,
-}: PodcastCardProps) {
+}: PopularPodcastCardProps) {
    return (
       <li className={styles.listItem}>
          <Card
             imgSrc={imgSrc}
             imgAlt={imgAlt}
-            className={styles.trendingPod}
-            imgClassName={styles.podCardImg}
+            className={styles.popularPodcastCard}
+            imgClassName={styles.podCardThumbnail}
          >
             <>
                <h5 className={styles.title}>{podName}</h5>
@@ -34,4 +34,4 @@ function PodcastCard({
    );
 }
 
-export default PodcastCard;
+export default PopularPodcastCard;

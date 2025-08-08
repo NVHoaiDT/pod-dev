@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import usePodcast from '~/hooks/usePodcast';
 import styles from './PopularPods.module.css';
-import PodCard from '../PodcastCard';
+import PopularPodcastCard from '../PopularPodcastCard';
 
 function PopularPods() {
    const { data, error, isLoading } = usePodcast('popular');
@@ -11,17 +11,23 @@ function PopularPods() {
 
    return (
       <section>
-         <h2>Popular Podcasts</h2>
+         <h3>Popular Podcasts</h3>
          <ul className={styles.row}>
             {data?.map(
-               ({ _id, title, thumbnailAlt, thumbnailSrc }) => (
-                  <PodCard
+               ({
+                  _id,
+                  title,
+                  thumbnailAlt,
+                  thumbnailSrc,
+                  audioSrc,
+               }) => (
+                  <PopularPodcastCard
                      key={_id}
                      podName={title}
                      imgSrc={thumbnailSrc}
                      imgAlt={thumbnailAlt}
-                     // this one should be handled latter
                      author={'TEMP'}
+                     audioSrc={audioSrc}
                   />
                )
             )}

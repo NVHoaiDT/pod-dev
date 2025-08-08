@@ -1,9 +1,7 @@
 .row {
    display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   gap: 8px;
+   padding: 12px 0px;
+   overflow-x: hidden;
 }
 
 .column {

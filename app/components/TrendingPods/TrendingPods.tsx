@@ -3,7 +3,7 @@ import * as React from 'react';
 import usePodcast from '~/hooks/usePodcast';
 
 import styles from './TrendingPods.module.css';
-import PodcastCard from '../PodcastCard';
+import PodcastCard from '../PopularPodcastCard';
 
 function TrendingPods() {
    const { data, error, isLoading } = usePodcast('trending');
