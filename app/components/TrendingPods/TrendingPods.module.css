@@ -1,15 +1,12 @@
 .section {
    display: flex;
    flex-direction: column;
-   gap: 20px;
+   margin-top: 12px;
 }
 .row {
-   margin: 0;
-   padding: 0;
    display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   align-items: center;
+   padding: 8px 0px;
+   overflow-x: hidden;
 }
 
 .column {

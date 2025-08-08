@@ -9,7 +9,6 @@ import {
    ProfileIcon,
 } from '../../libs/icons';
 
-// use useContext latter.
 const navItemsData = [
    { id: 'home', to: '/', icon: <HomeIcon />, text: 'Home' },
    {

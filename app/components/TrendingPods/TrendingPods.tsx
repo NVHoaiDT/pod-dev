@@ -3,7 +3,7 @@ import * as React from 'react';
 import usePodcast from '~/hooks/usePodcast';
 
 import styles from './TrendingPods.module.css';
-import PodcastCard from '../PopularPodcastCard';
+import TrendingPodcastCard from '../TrendingPodcastCard';
 
 function TrendingPods() {
    const { data, error, isLoading } = usePodcast('trending');
@@ -24,7 +24,7 @@ function TrendingPods() {
                   title,
                   author,
                }) => (
-                  <PodcastCard
+                  <TrendingPodcastCard
                      key={_id}
                      imgSrc={thumbnailSrc}
                      imgAlt={thumbnailAlt}
