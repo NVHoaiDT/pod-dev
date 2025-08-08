@@ -1,5 +1,6 @@
 import React from 'react';
 
+import styles from './Navbar.module.css';
 import Logo from '../Logo/Logo';
 import NavItem from '../NavItem/NavItem';
 import {
@@ -34,7 +35,7 @@ export default function Navbar() {
    return (
       <nav>
          <Logo></Logo>
-         <ul>
+         <ul className={styles.list}>
             {navItemsData.map(({ id, to, icon, text }) => (
                <NavItem key={id} to={to} icon={icon} text={text} />
             ))}

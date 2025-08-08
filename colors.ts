@@ -29,7 +29,7 @@ export const LIGHT_COLORS: Record<string, string> = {
 
 export const DARK_COLORS: Record<string, string> = {
    '--color-text': '#ffffff',
-   '--color-text-secondary': '#adb5bd',
+   '--color-text-secondary': '#bfbec1',
 
    '--color-primary-100': '#fff2e0',
    '--color-primary-300': '#ffd966',
@@ -125,12 +125,19 @@ export const DARK_SHADOWS = {
    '--shadow-card': 'none',
 };
 
+export const FONT = {
+   '--font-family': 'Manrope, sans-serif',
+   '--font-secondary': 'Inter, sans-serif',
+};
+
 export const LIGHT_TOKENS = {
    ...LIGHT_COLORS,
    ...LIGHT_SHADOWS,
+   ...FONT,
 };
 
 export const DARK_TOKENS = {
    ...DARK_COLORS,
    ...DARK_SHADOWS,
+   ...FONT,
 };
