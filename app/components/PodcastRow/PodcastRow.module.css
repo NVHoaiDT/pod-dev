@@ -3,8 +3,8 @@ button {
 }
 
 .thumbnail {
-   width: 64px;
-   height: 64px;
+   width: 54px;
+   height: 54px;
    border-radius: 4px;
 }
 
@@ -47,10 +47,10 @@ button {
 }
 
 .podTitle {
-   word-break: break-word;
    display: flex;
    flex-direction: row;
    justify-content: flex-start;
    align-items: center;
    gap: 8px;
+   white-space: nowrap;
 }

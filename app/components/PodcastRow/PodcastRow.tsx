@@ -55,7 +55,7 @@ export default function PodCastRow({
                   imgAlt={thumbnailAlt}
                >
                   <>
-                     <h5>{title}</h5>
+                     <h5 className={styles.title}>{title}</h5>
                      <p>{author}</p>
                   </>
                </Card>
