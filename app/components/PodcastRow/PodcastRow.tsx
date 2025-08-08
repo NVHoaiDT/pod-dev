@@ -45,7 +45,7 @@ export default function PodCastRow({
          }}
       >
          <button className={styles.item}>
-            <div className={styles.ranking}>01</div>
+            <div className={styles.ranking}>1</div>
 
             <div className={styles.pod}>
                <Card
@@ -55,7 +55,7 @@ export default function PodCastRow({
                   imgAlt={thumbnailAlt}
                >
                   <>
-                     <h5 className={styles.title}>{title}</h5>
+                     <p className={styles.podName}>{title}</p>
                      <p>{author}</p>
                   </>
                </Card>
