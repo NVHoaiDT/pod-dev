@@ -1,2 +1,2 @@
-export * from './SuggestedCard';
-export { default } from './SuggestedCard';
+export * from './SuggestedCards';
+export { default } from './SuggestedCards';
