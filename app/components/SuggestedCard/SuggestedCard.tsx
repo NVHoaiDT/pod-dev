@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import LinkButton from '../LinkButton/LinkButton';
 import Card from '../Card/Card';
 import styles from './SuggestedCard.module.css';
 
@@ -15,13 +14,14 @@ const podsData = {
 function SuggestedCard() {
    return (
       <Card
-         className={styles.cardImage}
+         className={styles.suggestedCard}
+         imgClassName={styles.suggestedCardThumbnail}
          imgSrc={podsData.imgSrc}
          imgAlt={podsData.imgAlt}
       >
          <div className={styles.info}>
-            <p>{podsData.podName}</p>
-            <p>{podsData.author}</p>
+            <p className={styles.podName}>{podsData.podName}</p>
+            <p className={styles.author}>{podsData.author}</p>
          </div>
       </Card>
    );

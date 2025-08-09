@@ -102,8 +102,8 @@ DARK_COLORS['--color-page-border'] = 'hsl(256deg 30% 50% / 0.2)';
 DARK_COLORS['--color-card-background'] =
    DARK_COLORS['--color-backdrop'];
 
-DARK_COLORS['--color-card-border'] =
-   DARK_COLORS['--color-page-border'];
+DARK_COLORS['--color-card-border'] = '#454545';
+
 DARK_COLORS['color-hover-background'] =
    'linear-gradient(232deg, rgba(28, 28, 35, 0.41) 0%, rgba(19, 22, 28, 0.70) 100%)';
 

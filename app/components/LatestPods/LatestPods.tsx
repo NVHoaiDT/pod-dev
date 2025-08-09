@@ -1,11 +1,11 @@
 import React from 'react';
 import usePodcast from '~/hooks/usePodcast';
 
+import formatSeconds from '~/helpers/format-time';
+
 import styles from './LatestPods.module.css';
 import LinkButton from '../LinkButton/LinkButton';
 import PodCastRow from '../PodcastRow/PodcastRow';
-
-import formatSeconds from '~/helpers/format-time';
 
 function LatestPods() {
    const { data, error, isLoading } = usePodcast('latest');

@@ -3,8 +3,8 @@ button {
 }
 
 .thumbnail {
-   width: 54px;
-   height: 54px;
+   width: 48px;
+   height: 48px;
    border-radius: 4px;
 }
 
@@ -35,7 +35,7 @@ button {
    flex-direction: row;
    justify-content: flex-start;
    align-items: center;
-   gap: 16px;
+   gap: 24px;
 }
 .pod {
    display: flex;
@@ -44,7 +44,7 @@ button {
    align-items: center;
    flex-grow: 1;
    padding-bottom: 8px;
-   border-bottom: 1px solid #868e96;
+   border-bottom: 1px solid var(--color-card-border);
    font-size: 14px;
    font-weight: 600;
 }
@@ -56,4 +56,8 @@ button {
    align-items: center;
    gap: 8px;
    white-space: nowrap;
+}
+
+.podName {
+   font-weight: 700;
 }
