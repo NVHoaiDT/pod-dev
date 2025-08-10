@@ -14,7 +14,7 @@ const podsData = {
 
 function SuggestedCard() {
    return (
-      <div>
+      <div className={styles.suggestedCardContainer}>
          <Card
             className={styles.suggestedCard}
             imgClassName={styles.suggestedCardThumbnail}
