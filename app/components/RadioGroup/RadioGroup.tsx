@@ -9,11 +9,12 @@ function RadioGroup() {
             className={styles.Root}
             defaultValue="default"
             aria-label="View density"
+            orientation="vertical"
          >
             <div style={{ display: 'flex', alignItems: 'center' }}>
                <PrimitiveRadioGroup.Item
                   className={styles.Item}
-                  value="default"
+                  value="1"
                   id="r1"
                >
                   <PrimitiveRadioGroup.Indicator
@@ -21,13 +22,14 @@ function RadioGroup() {
                   />
                </PrimitiveRadioGroup.Item>
                <label className={styles.Label} htmlFor="r1">
-                  Default
+                  1
                </label>
             </div>
+
             <div style={{ display: 'flex', alignItems: 'center' }}>
                <PrimitiveRadioGroup.Item
                   className={styles.Item}
-                  value="comfortable"
+                  value="2"
                   id="r2"
                >
                   <PrimitiveRadioGroup.Indicator
@@ -35,13 +37,14 @@ function RadioGroup() {
                   />
                </PrimitiveRadioGroup.Item>
                <label className={styles.Label} htmlFor="r2">
-                  Comfortable
+                  2
                </label>
             </div>
+
             <div style={{ display: 'flex', alignItems: 'center' }}>
                <PrimitiveRadioGroup.Item
                   className={styles.Item}
-                  value="compact"
+                  value="3"
                   id="r3"
                >
                   <PrimitiveRadioGroup.Indicator
@@ -49,7 +52,22 @@ function RadioGroup() {
                   />
                </PrimitiveRadioGroup.Item>
                <label className={styles.Label} htmlFor="r3">
-                  Compact
+                  3
+               </label>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+               <PrimitiveRadioGroup.Item
+                  className={styles.Item}
+                  value="4"
+                  id="r4"
+               >
+                  <PrimitiveRadioGroup.Indicator
+                     className={styles.Indicator}
+                  />
+               </PrimitiveRadioGroup.Item>
+               <label className={styles.Label} htmlFor="r4">
+                  4
                </label>
             </div>
          </PrimitiveRadioGroup.Root>

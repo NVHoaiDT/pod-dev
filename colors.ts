@@ -18,12 +18,15 @@ export const LIGHT_COLORS: Record<string, string> = {
    '--color-decorative-900': '#806600',
 
    '--color-gray-0': '#ffffff',
-   '--color-gray-100': '#e7e3d9',
-   '--color-gray-200': '#dcd6cd',
-   '--color-gray-300': '#bfb8ad',
-   '--color-gray-500': '#807b7a',
-   '--color-gray-700': '#403e3a',
-   '--color-gray-900': '#1a1916',
+   '--color-gray-100': '#f1f3f5',
+   '--color-gray-200': '#e9ecef',
+   '--color-gray-300': '#dee2e6',
+   '--color-gray-400': '#ced4da',
+   '--color-gray-500': '#adb5bd',
+   '--color-gray-600': '#868e96',
+   '--color-gray-700': '#495057',
+   '--color-gray-800': '#343a40',
+   '--color-gray-900': '#212529',
    '--color-gray-1000': '#000000',
 };
 
@@ -49,13 +52,17 @@ export const DARK_COLORS: Record<string, string> = {
    '--color-decorative-900': '#d1bbf6',
 
    '--color-gray-0': '#000000',
-   '--color-gray-100': '#1a1326',
-   '--color-gray-200': '#261c38',
-   '--color-gray-300': '#4c366e',
-   '--color-gray-500': '#807b80',
-   '--color-gray-700': '#ccc9cc',
-   '--color-gray-900': '#f2f1f2',
+   '--color-gray-100': '#212529',
+   '--color-gray-200': '#343a40',
+   '--color-gray-300': '#495057',
+   '--color-gray-400': '#868e96',
+   '--color-gray-500': '#adb5bd',
+   '--color-gray-600': '#ced4da',
+   '--color-gray-700': '#dee2e6',
+   '--color-gray-800': '#e9ecef',
+   '--color-gray-900': '#f1f3f5',
    '--color-gray-1000': '#ffffff',
+
    '--corlor-gray-gradient':
       'linear-gradient(232deg, rgba(23, 28, 35, 0.41) 0%, rgba(19, 22, 28, 0.70) 100%)',
 };
