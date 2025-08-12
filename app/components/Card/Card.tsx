@@ -19,7 +19,7 @@ export default function Card({
    return (
       <figure className={`${styles.card} ${className}`}>
          <img src={imgSrc} alt={imgAlt} className={imgClassName} />
-         <div>{children}</div>
+         {children}
       </figure>
    );
 }

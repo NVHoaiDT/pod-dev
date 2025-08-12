@@ -1,7 +1,13 @@
+.item {
+   width: 100%;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
 .podcasterCard {
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
    align-items: center;
    gap: 8px;
    white-space: nowrap;
@@ -13,10 +19,25 @@
    border-radius: 4px;
 }
 
-.info {
+.podcastersInfo {
+   width: 100%;
+   flex: 1;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
    gap: 16px;
+}
+
+.name {
+   font-size: 14px;
+}
+
+.nickName,
+.totalPodcast {
+   font-size: 12px;
+}
+
+.nickName {
+   color: var(--color-text-secondary);
 }
