@@ -5,7 +5,7 @@ import styles from './PodcastPlayer.module.css';
 import PodcastPlayerControls from './PodcastPlayerControls';
 import Card from '../Card/Card';
 import PodcastProgressControls from './PodcastProgressControls';
-import Progress from '../Progress';
+import Slider from '../Slider';
 
 type PodcasterPlayerProps = {
    title: string;
@@ -106,8 +106,10 @@ function PodcastPlayer({
 
    return (
       <div className={styles.podcastPlayer}>
-         {/* TODO : ADD THE PROGRESS BAR HERE */}
-         <Progress></Progress>
+         <Slider
+            currentValue={currentTime}
+            className={styles.progressBar}
+         />
 
          <div className={styles.player}>
             <Card

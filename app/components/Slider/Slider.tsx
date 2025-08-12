@@ -5,19 +5,27 @@ import styles from './Slider.module.css';
 
 interface SliderProps {
    className?: string;
-   defaultValue?: number;
+   defaultValue?: number[];
+   currentValue?: number;
    max?: number;
    step?: number;
 }
 
-function Slider({ className, defaultValue, max, step }: SliderProps) {
+function Slider({
+   className,
+   defaultValue,
+   currentValue,
+   max,
+   step,
+}: SliderProps) {
    return (
       <form>
          <PrimitiveSlider.Root
-            className={styles.root}
-            defaultValue={[50]}
-            max={100}
-            step={1}
+            className={`${className} ${styles.root}`}
+            defaultValue={defaultValue || [50]}
+            value={[currentValue || 50]}
+            max={max || 100}
+            step={step || 1}
          >
             <PrimitiveSlider.Track className={styles.track}>
                <PrimitiveSlider.Range className={styles.range} />

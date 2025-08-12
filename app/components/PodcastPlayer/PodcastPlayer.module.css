@@ -7,6 +7,9 @@
    flex-direction: column;
 }
 
+.progressBar {
+   width: 100% !important;
+}
 .player {
    display: flex;
    flex-direction: row;

@@ -36,7 +36,7 @@ function PodcastProgressControls({
                <SpeakerHighDuotone size={'24px'} />
             )}
          </button>
-         <Slider></Slider>
+         {/* <Slider></Slider> */}
       </div>
    );
 }
