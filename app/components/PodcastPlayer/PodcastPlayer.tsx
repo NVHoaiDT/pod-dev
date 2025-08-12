@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 import useToggle from '~/hooks/useToggle';
-import Slider from '../Slider';
 import styles from './PodcastPlayer.module.css';
 import PodcastPlayerControls from './PodcastPlayerControls';
 import Card from '../Card/Card';
 import PodcastProgressControls from './PodcastProgressControls';
+import Progress from '../Progress';
 
 type PodcasterPlayerProps = {
    title: string;
@@ -107,33 +107,36 @@ function PodcastPlayer({
    return (
       <div className={styles.podcastPlayer}>
          {/* TODO : ADD THE PROGRESS BAR HERE */}
+         <Progress></Progress>
 
-         <Card
-            className={styles.podcastPlayerCard}
-            imgSrc={thumbnailSrc}
-            imgAlt={thumbnailAlt}
-            imgClassName={styles.thumbnail}
-         >
-            <div>
-               <b>{title}</b>
-               <p>{author}</p>
-            </div>
-         </Card>
+         <div className={styles.player}>
+            <Card
+               className={styles.podcastPlayerCard}
+               imgSrc={thumbnailSrc}
+               imgAlt={thumbnailAlt}
+               imgClassName={styles.thumbnail}
+            >
+               <div>
+                  <b>{title}</b>
+                  <p>{author}</p>
+               </div>
+            </Card>
 
-         <PodcastPlayerControls
-            isPlaying={isPlaying}
-            handlePlayPause={togglePlayPause}
-            handleNext={handleNext}
-            handlePrevious={handlePrevious}
-         ></PodcastPlayerControls>
+            <PodcastPlayerControls
+               isPlaying={isPlaying}
+               handlePlayPause={togglePlayPause}
+               handleNext={handleNext}
+               handlePrevious={handlePrevious}
+            ></PodcastPlayerControls>
 
-         <PodcastProgressControls
-            currentTime={currentTime}
-            duration={duration}
-            volume={volume}
-            isMuted={isMuted}
-            handleIsMuted={toggleIsMuted}
-         ></PodcastProgressControls>
+            <PodcastProgressControls
+               currentTime={currentTime}
+               duration={duration}
+               volume={volume}
+               isMuted={isMuted}
+               handleIsMuted={toggleIsMuted}
+            ></PodcastProgressControls>
+         </div>
       </div>
    );
 }

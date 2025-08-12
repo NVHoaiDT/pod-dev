@@ -3,7 +3,14 @@ import { Slider as PrimitiveSlider } from 'radix-ui';
 
 import styles from './Slider.module.css';
 
-function Slider() {
+interface SliderProps {
+   className?: string;
+   defaultValue?: number;
+   max?: number;
+   step?: number;
+}
+
+function Slider({ className, defaultValue, max, step }: SliderProps) {
    return (
       <form>
          <PrimitiveSlider.Root
