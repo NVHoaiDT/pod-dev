@@ -11,16 +11,43 @@ button {
    align-items: center;
    gap: 16px;
 }
+.time {
+   color: var(--color-text-secondary);
+}
+
 .shuffleButton {
 }
-.previousButton {
-}
-.pauseButton {
-}
-.playButton {
-}
+.previousButton,
 .nextButton {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 4px;
 }
+
+.previousButton svg,
+.nextButton svg {
+   flex: 0 0 auto;
+}
+.previousButton span,
+.nextButton span {
+   font-size: 12px;
+   color: var(--color-text-secondary);
+}
+
+.pauseButton,
+.playButton {
+   padding: 12px;
+   border-radius: 100%;
+   background-color: var(--color-gray-300);
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 4px;
+}
+
 .repeatButton {
 }
 

@@ -9,7 +9,7 @@
    align-items: center;
    padding: 12px 64px;
    box-sizing: border-box;
-   backdrop-filter: blur(14px);
+   backdrop-filter: blur(18px);
 }
 
 .podcastPlayerCard,

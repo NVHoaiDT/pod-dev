@@ -15,10 +15,6 @@ function Slider() {
             <PrimitiveSlider.Track className={styles.track}>
                <PrimitiveSlider.Range className={styles.range} />
             </PrimitiveSlider.Track>
-            <PrimitiveSlider.Thumb
-               className={styles.thumb}
-               aria-label="Volume"
-            />
          </PrimitiveSlider.Root>
       </form>
    );
