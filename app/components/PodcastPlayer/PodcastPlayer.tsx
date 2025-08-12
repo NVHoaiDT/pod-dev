@@ -4,6 +4,7 @@ import useToggle from '~/hooks/useToggle';
 import Slider from '../Slider';
 import styles from './PodcastPlayer.module.css';
 import PodcastPlayerControls from './PodcastPlayerControls';
+import Card from '../Card/Card';
 
 type PodcasterPlayerProps = {
    title: string;
@@ -104,17 +105,19 @@ function PodcastPlayer({
 
    return (
       <div className={styles.podcastPlayer}>
-         <div className={styles.info}>
-            <img
-               src={thumbnailSrc}
-               alt={thumbnailAlt}
-               className={styles.thumbnail}
-            />
+         {/* TODO : ADD THE PROGRESS BAR HERE */}
+
+         <Card
+            className={styles.podcastPlayerCard}
+            imgSrc={thumbnailSrc}
+            imgAlt={thumbnailAlt}
+            imgClassName={styles.thumbnail}
+         >
             <div>
-               <h3>{title}</h3>
+               <b>{title}</b>
                <p>{author}</p>
             </div>
-         </div>
+         </Card>
 
          <PodcastPlayerControls
             isPlaying={isPlaying}

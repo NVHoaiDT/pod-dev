@@ -13,7 +13,7 @@ function TopPodcasters() {
    if (isLoading) return <div>loading...</div>;
 
    return (
-      <div className={styles.topPodcasters}>
+      <section className={styles.topPodcasters}>
          <header className={styles.header}>
             <h4>Top Podcasters</h4>
             <LinkButton href="/podcasters" className={styles.action}>
@@ -31,7 +31,7 @@ function TopPodcasters() {
                />
             ))}
          </ul>
-      </div>
+      </section>
    );
 }
 

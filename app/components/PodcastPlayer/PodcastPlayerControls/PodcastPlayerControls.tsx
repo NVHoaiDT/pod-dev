@@ -4,12 +4,12 @@ import formatSeconds from '~/helpers/format-time';
 
 import styles from './PodcastPlayerControls.module.css';
 import {
-   PlayIcon,
-   PauseIcon,
-   ShuffleIcon,
+   PlayLineDuotone,
+   PauseLineDuotone,
+   ShuffleLineDuotone,
    RepeatIcon,
-   PlayNextFillIcon,
-   PlayBackIcon,
+   PlayerNextDuotone,
+   PlayerPreviousDuotone,
    Volume2Icon,
    MutedSpeakerIcon,
 } from '../../../libs/icons';
@@ -41,13 +41,13 @@ function PodcastPlayerControls({
       <>
          <div className={styles.controls}>
             <button className={styles.shuffleButton}>
-               <ShuffleIcon />
+               <ShuffleLineDuotone size={'32px'} />
             </button>
             <button
                className={styles.previousButton}
                onClick={handlePrevious}
             >
-               <PlayBackIcon />
+               <PlayerPreviousDuotone size={'32px'} />
                {-15}
             </button>
             {isPlaying ? (
@@ -55,14 +55,14 @@ function PodcastPlayerControls({
                   className={styles.pauseButton}
                   onClick={handlePlayPause}
                >
-                  <PauseIcon />
+                  <PauseLineDuotone size={'32px'} />
                </button>
             ) : (
                <button
                   className={styles.playButton}
                   onClick={handlePlayPause}
                >
-                  <PlayIcon />
+                  <PlayLineDuotone size={'32px'} />
                </button>
             )}
             <button
@@ -70,7 +70,7 @@ function PodcastPlayerControls({
                onClick={handleNext}
             >
                {+15}
-               <PlayNextFillIcon />
+               <PlayerNextDuotone size={'32px'} />
             </button>
             <button className={styles.repeatButton}>
                <RepeatIcon />
