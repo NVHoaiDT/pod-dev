@@ -5,6 +5,7 @@ import Slider from '../Slider';
 import styles from './PodcastPlayer.module.css';
 import PodcastPlayerControls from './PodcastPlayerControls';
 import Card from '../Card/Card';
+import PodcastProgressControls from './PodcastProgressControls';
 
 type PodcasterPlayerProps = {
    title: string;
@@ -124,13 +125,15 @@ function PodcastPlayer({
             handlePlayPause={togglePlayPause}
             handleNext={handleNext}
             handlePrevious={handlePrevious}
-            duration={duration}
+         ></PodcastPlayerControls>
+
+         <PodcastProgressControls
             currentTime={currentTime}
+            duration={duration}
             volume={volume}
             isMuted={isMuted}
             handleIsMuted={toggleIsMuted}
-         ></PodcastPlayerControls>
-         <Slider></Slider>
+         ></PodcastProgressControls>
       </div>
    );
 }

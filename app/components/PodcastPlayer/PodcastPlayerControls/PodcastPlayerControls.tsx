@@ -10,20 +10,13 @@ import {
    RepeatLineDuotone,
    PlayerNextDuotone,
    PlayerPreviousDuotone,
-   SpeakerHighDuotone,
-   SpeakerSlashDuotone,
 } from '../../../libs/icons';
 
 interface PodcastPlayerProps {
    handlePlayPause: () => void;
    handleNext: () => void;
    handlePrevious: () => void;
-   handleIsMuted: () => void;
    isPlaying: boolean;
-   isMuted: boolean;
-   volume: number;
-   currentTime: number;
-   duration: number;
 }
 
 function PodcastPlayerControls({
@@ -31,11 +24,6 @@ function PodcastPlayerControls({
    handlePlayPause,
    handleNext,
    handlePrevious,
-   currentTime,
-   duration,
-   volume,
-   isMuted,
-   handleIsMuted,
 }: PodcastPlayerProps) {
    return (
       <>

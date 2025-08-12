@@ -405,8 +405,8 @@ export const PlayerPreviousDuotone = ({
          />
          <path
             stroke="currentColor"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M21 17.196V6.804c0-1.54-1.667-2.502-3-1.732l-3 1.732v10.392l3 1.732c1.333.77 3-.192 3-1.732ZM3 13.732c-1.333-.77-1.333-2.694 0-3.464l9-5.196c1.333-.77 3 .192 3 1.732v10.392c0 1.54-1.667 2.502-3 1.732l-9-5.196Z"
          />
       </g>
@@ -434,8 +434,8 @@ export const PlayerNextDuotone = ({
          />
          <path
             stroke="currentColor"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M3 6.804v10.392c0 1.54 1.667 2.502 3 1.732l3-1.732V6.804L6 5.072c-1.333-.77-3 .192-3 1.732Zm18 3.464c1.333.77 1.333 2.694 0 3.464l-9 5.196c-1.333.77-3-.192-3-1.732V6.804c0-1.54 1.667-2.502 3-1.732l9 5.196Z"
          />
       </g>
@@ -456,7 +456,7 @@ export const PlayLineDuotone = ({ size }: PlayLineDuotoneProps) => (
       <path
          fill="none"
          stroke="currentColor"
-         stroke-width="1.5"
+         strokeWidth="1.5"
          d="M20.409 9.353a2.998 2.998 0 0 1 0 5.294L7.597 21.614C5.534 22.736 3 21.276 3 18.968V5.033c0-2.31 2.534-3.769 4.597-2.648l12.812 6.968Z"
       />
    </svg>
@@ -473,7 +473,7 @@ export const PauseLineDuotone = ({ size }: PauseLineDuotoneProps) => (
       height={size}
       viewBox="0 0 24 24"
    >
-      <g fill="none" stroke="currentColor" stroke-width="1.5">
+      <g fill="none" stroke="currentColor" strokeWidth="1.5">
          <path d="M2 6c0-1.886 0-2.828.586-3.414C3.172 2 4.114 2 6 2c1.886 0 2.828 0 3.414.586C10 3.172 10 4.114 10 6v12c0 1.886 0 2.828-.586 3.414C8.828 22 7.886 22 6 22c-1.886 0-2.828 0-3.414-.586C2 20.828 2 19.886 2 18V6Z" />
          <path
             d="M14 6c0-1.886 0-2.828.586-3.414C15.172 2 16.114 2 18 2c1.886 0 2.828 0 3.414.586C22 3.172 22 4.114 22 6v12c0 1.886 0 2.828-.586 3.414C20.828 22 19.886 22 18 22c-1.886 0-2.828 0-3.414-.586C14 20.828 14 19.886 14 18V6Z"
