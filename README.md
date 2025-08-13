@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/-Vite-black?style=for-the-badge&logoColor=white&logo=vite&color=646CFF" alt="typescript" />    
     <img src="https://img.shields.io/badge/-React_Router-black?style=for-the-badge&logo=reactrouter&logoColor=white&color=CA4245" alt="reactrouter" />
     <img src="https://img.shields.io/badge/-Typescript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />    
-    <img src="https://img.shields.io/badge/-Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=white&color=0055FF
+    <img src="https://img.shields.io/badge/-Framer-black?style=for-the-badge&logo=framer&logoColor=white&color=0055FF
     " alt="framermotion" />        
     <img src="https://img.shields.io/badge/-SWR-black?style=for-the-badge&logo=swr&logoColor=white&color=000000 " alt="swr" />    
   </div>
