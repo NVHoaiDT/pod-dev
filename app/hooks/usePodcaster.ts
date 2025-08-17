@@ -10,7 +10,7 @@ type Podcaster = {
 };
 
 export default function usePodcast(type: string) {
-   const URL = `http://localhost:3000/main/podcaster/${type}/`;
+   const URL = `https://pod-dev-server.vercel.app/main/podcaster/${type}/`;
 
    return useSWR<Podcaster[]>(URL, fetcher);
 }

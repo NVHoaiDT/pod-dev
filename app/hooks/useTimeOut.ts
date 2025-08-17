@@ -1,7 +1,9 @@
-import { s } from 'node_modules/react-router/dist/development/lib-C1JSsICm.mjs';
 import React from 'react';
 
-export default function useTimeOut(callback: () => void, delay: number) {
+export default function useTimeOut(
+   callback: () => void,
+   delay: number
+) {
    const timeoutRef = React.useRef<number | null>(null);
    const savedCallback = React.useRef(callback);
 

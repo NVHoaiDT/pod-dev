@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 
 import { fetcher } from '~/utils/fetching';
-import formatSeconds from '~/helpers/format-time';
+
 type Podcast = {
    _id: string;
    title: string;
@@ -13,7 +13,7 @@ type Podcast = {
 };
 
 export default function usePodcast(category: string) {
-   const URL = `http://localhost:3000/main/podcast/${category}/`;
+   const URL = `https://pod-dev-server.vercel.app/main/podcast/${category}/`;
 
    return useSWR<Podcast[]>(URL, fetcher);
 }
