@@ -23,7 +23,7 @@ function Slider({
          <PrimitiveSlider.Root
             className={`${className} ${styles.root}`}
             defaultValue={defaultValue || [50]}
-            value={[currentValue || 50]}
+            value={[currentValue || 0]}
             max={max || 100}
             step={step || 1}
          >

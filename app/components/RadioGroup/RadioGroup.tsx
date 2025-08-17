@@ -21,9 +21,7 @@ function RadioGroup() {
                      className={styles.Indicator}
                   />
                </PrimitiveRadioGroup.Item>
-               <label className={styles.Label} htmlFor="r1">
-                  1
-               </label>
+               <label className={styles.Label} htmlFor="r1"></label>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -36,9 +34,7 @@ function RadioGroup() {
                      className={styles.Indicator}
                   />
                </PrimitiveRadioGroup.Item>
-               <label className={styles.Label} htmlFor="r2">
-                  2
-               </label>
+               <label className={styles.Label} htmlFor="r2"></label>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -51,9 +47,7 @@ function RadioGroup() {
                      className={styles.Indicator}
                   />
                </PrimitiveRadioGroup.Item>
-               <label className={styles.Label} htmlFor="r3">
-                  3
-               </label>
+               <label className={styles.Label} htmlFor="r3"></label>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -66,9 +60,7 @@ function RadioGroup() {
                      className={styles.Indicator}
                   />
                </PrimitiveRadioGroup.Item>
-               <label className={styles.Label} htmlFor="r4">
-                  4
-               </label>
+               <label className={styles.Label} htmlFor="r4"></label>
             </div>
          </PrimitiveRadioGroup.Root>
       </form>

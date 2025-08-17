@@ -11,3 +11,6 @@
    flex-direction: column;
    gap: 24px;
 }
+.aside {
+   padding: 12px 24px;
+}

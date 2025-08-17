@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { CurrentPodcastContext } from '~/routes/home';
+
 import styles from './PopularPodcastCard.module.css';
 import Card from '../Card/Card';
 
@@ -17,19 +19,35 @@ function PopularPodcastCard({
    author,
    audioSrc,
 }: PopularPodcastCardProps) {
+   const { handleChangePodcast } = React.useContext(
+      CurrentPodcastContext
+   );
    return (
       <li className={styles.listItem}>
-         <Card
-            imgSrc={imgSrc}
-            imgAlt={imgAlt}
-            className={styles.popularPodcastCard}
-            imgClassName={styles.podCardThumbnail}
+         <button
+            className={styles.button}
+            onClick={() => {
+               handleChangePodcast(
+                  podName,
+                  author,
+                  imgSrc,
+                  imgAlt,
+                  audioSrc
+               );
+            }}
          >
-            <>
-               <h5 className={styles.title}>{podName}</h5>
-               <p className={styles.author}>{author}</p>
-            </>
-         </Card>
+            <Card
+               imgSrc={imgSrc}
+               imgAlt={imgAlt}
+               className={styles.popularPodcastCard}
+               imgClassName={styles.podCardThumbnail}
+            >
+               <>
+                  <h5 className={styles.title}>{podName}</h5>
+                  <p className={styles.author}>{author}</p>
+               </>
+            </Card>
+         </button>
       </li>
    );
 }

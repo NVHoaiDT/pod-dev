@@ -19,11 +19,8 @@ function LatestPods() {
             <h3>Latest Podcasts</h3>
             <div className={styles.actions}>
                <LinkButton className={styles.action}>Sort</LinkButton>
-               <LinkButton
-                  className={styles.action}
-                  href="/latest-pods"
-               >
-                  Podcast
+               <LinkButton className={styles.action} href="/">
+                  Refresh
                </LinkButton>
             </div>
          </header>
