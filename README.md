@@ -28,6 +28,9 @@ A platform that aiming to enables users to create, discover, and enjoy podcasts.
 -  TypeScript
 -  Framer Motion
 
+> [!NOTE]
+> This project is currently on draft, pretty much the podcast random is just random music 😅 .
+
 ## Quick Start
 
 Poddev is live at [Poddev](). For running locally, follow these steps to set up the project on your machine.
